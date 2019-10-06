@@ -14,6 +14,7 @@
 
 html {
     --navbar__background: #FFFFFF;
+    --navbar--link__color: #000;
     --link__color: #000000;
     --link__color-hover: #000000;
     --text__color: #000000;
@@ -113,6 +114,7 @@ p {
 
 .nav-content {
     display: flex;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
 
@@ -140,7 +142,7 @@ p {
         }
 
         .active {
-            border-bottom: 4px solid var(--navbar--link__color);
+            border-bottom: 4px solid var(--navbar--link__color) !important;
         }
     }
 }
@@ -183,4 +185,18 @@ p {
 
 .hero {
     background: linear-gradient(to bottom,rgba(0, 0, 0, 0.3) 0,rgba(0, 0, 0, 0.3) 100%), var(--hero--image);
+}
+
+.link-instagram {
+    color: #fff !important;
+    text-decoration: none;
+
+    &:hover {
+        color: #f0f0f0 !important;
+        text-decoration: none;
+    }
+}
+
+.text-shadow {
+    text-shadow: 2px 1px 1px var(--link__color-hover);
 }

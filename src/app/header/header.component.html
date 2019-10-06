@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" [ngClass]="{'bg-transparent': !isSticky}" id="navbar" (scroll)="onWindowScroll($event);">
+    <nav class="navbar navbar-expand navbar-light fixed-top" [ngClass]="{'bg-transparent': !isSticky}" id="navbar" (scroll)="onWindowScroll($event);">
         <div class="nav-content">
             <a class="navbar-brand" routerLink="/"><b>SHIGA</b></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -13,7 +13,7 @@
                     <li class="nav-item">
                         <a routerLink="/" class="nav-link" routerLinkActive="active" i18n>início</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <div ngbDropdown class="d-inline-block">
                             <button class="btn nav-link" id="dropdownBasic2" ngbDropdownToggle i18n>idioma</button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
@@ -21,7 +21,7 @@
                                 <button ngbDropdownItem>EN-US</button>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <button type="button" class="btn btn-theme nav-link" (click)="themeToggle()" title="toggle theme">
                             <i class="far fa-moon" *ngIf="isDarkMode" aria-label="dark theme"></i>
