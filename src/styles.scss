@@ -1,1 +1,186 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~animate.css/animate.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+/* ------------------------------------------
+    * global
+---------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --navbar__background: #FFFFFF;
+    --link__color: #000000;
+    --link__color-hover: #000000;
+    --text__color: #000000;
+    --bg: #fff;
+    --dropdown__background: #fff;
+    --hero--image: url(./assets/image/hero-light.jpg);
+}
+
+html[data-theme='dark'] {
+    --navbar__background: #000000;
+    --navbar--link__color: #FFFFFF;
+    --link__color-hover: #4a65a0;
+    --text__color: #FFFFFF;
+    --bg: #333333;
+    --dropdown__background: rgb(32, 32, 32);
+    --hero--image: url(./assets/image/hero-dark.jpg);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+
+h1 {
+    font-size: 36px;
+    color: var(--text__color);
+}
+
+h2 {
+    color: var(--text__color);
+}
+
+h3 {
+    color: var(--text__color);
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text__color);
+}
+
+/* ---------------------------------------
+    * navbar
+------------------------------------------*/
+.navbar {
+    z-index: 99;
+
+
+    .nav-item {
+        margin-left: 24px;
+
+        .nav-link {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 10px;
+            color: #FFFFFF !important;
+            font-size: 18px;
+
+            &:hover {
+                color: var(--link__color-hover) !important;
+                text-decoration: none;
+                border-bottom: 4px solid var(--link__color-hover);
+            }
+        }
+
+        .active {
+            font-weight: 700;
+            border-bottom: 4px solid #fff;
+        }
+
+        .dropdown-toggle {
+            font-family: 'Bree Serif', serif;
+            border-bottom: 4px solid transparent !important;
+
+            &:hover {
+                color:  var(--link__color-hover) !important;
+                text-decoration: none;
+                border-bottom: 4px solid var(--link__color-hover) !important;
+            }
+        }
+
+        .btn-theme {
+            border-bottom: 4px solid transparent !important;
+
+            &:hover {
+                border-bottom: 4px solid transparent !important;
+            }
+        }
+    }
+}
+
+
+.nav-content {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+
+    .navbar-brand {
+        font-size: 26px;
+        margin-right: 64px;
+        color: #fff !important;
+    }
+}
+
+.sticky {
+    background: var(--navbar__background) !important;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .navbar-brand {
+        color:  var(--navbar--link__color) !important;
+    }
+
+    .nav-item {
+        .nav-link {
+            color: var(--navbar--link__color) !important;
+        }
+
+        .active {
+            border-bottom: 4px solid var(--navbar--link__color);
+        }
+    }
+}
+
+/*
+    * dropdown
+*/
+.dropdown-menu {
+    background: var(--dropdown__background);
+
+    .dropdown-item {
+        color: var(--navbar--link__color);
+
+        &:hover {
+            color: #fff;
+            background: var(--link__color-hover);
+        }
+    }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--link__color-hover);
+    color: #fff;
+}
+
+
+
+/* -------------------------------
+    * home
+---------------------------------*/
+.home {
+
+    .info {
+        padding: 64px 0 120px 0;
+        min-height: 200px;
+        background: var(--bg);
+    }
+
+}
+
+.hero {
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.3) 0,rgba(0, 0, 0, 0.3) 100%), var(--hero--image);
+}
