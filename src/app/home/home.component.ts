@@ -1,5 +1,5 @@
+import { GoogleAnalyticsService } from './../shared/services/google-analytics.service';
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
 	selector: 'app-home',
@@ -8,9 +8,13 @@ import { DOCUMENT } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 
-	constructor(@Inject(DOCUMENT) document) { }
+	constructor(public googleAnalyticsService: GoogleAnalyticsService) { }
 
 	ngOnInit() {
+	}
+
+	SendGaEvent() {
+		this.googleAnalyticsService.eventEmitter('instaPage', 'visit', 'user', 1);
 	}
 
 }
