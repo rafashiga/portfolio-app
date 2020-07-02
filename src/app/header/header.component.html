@@ -1,19 +1,20 @@
 <header>
-    <nav class="navbar navbar-expand navbar-light fixed-top" [ngClass]="{'bg-transparent': !isSticky}" id="navbar" (scroll)="onWindowScroll($event);">
-        <div class="nav-content">
-            <a class="navbar-brand" routerLink="/"><b>SHIGA</b></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto" aria-hidden="true">
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a routerLink="/" class="nav-link" routerLinkActive="active" i18n>início</a>
-                    </li>
-                    <!-- <li class="nav-item">
+  <nav class="navbar navbar-expand navbar-light fixed-top" [ngClass]="{'bg-transparent': !isSticky}" id="navbar"
+    (scroll)="onWindowScroll($event);">
+    <div class="nav-content">
+      <a class="navbar-brand" id="linkInicio" routerLink="/"><b>SHIGA</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" aria-hidden="true">
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link" routerLinkActive="active" i18n>início</a>
+          </li>
+          <!-- <li class="nav-item">
                         <div ngbDropdown class="d-inline-block">
                             <button class="btn nav-link" id="dropdownBasic2" ngbDropdownToggle i18n>idioma</button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
@@ -22,14 +23,14 @@
                             </div>
                         </div>
                     </li> -->
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-theme nav-link" (click)="themeToggle()" title="toggle theme">
-                            <i class="far fa-moon" *ngIf="isDarkMode" aria-label="dark theme"></i>
-                            <i class="far fa-sun" *ngIf="!isDarkMode" aria-label="light theme"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+          <li class="nav-item">
+            <button type="button" class="btn btn-theme nav-link" (click)="themeToggle()" title="toggle theme">
+              <i class="far fa-moon" *ngIf="isDarkMode" aria-label="dark theme"></i>
+              <i class="far fa-sun" *ngIf="!isDarkMode" aria-label="light theme"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
