@@ -22,7 +22,7 @@ import { environment } from '../environments/environment';
       enabled: environment.production,
     }),
   ],
-  providers: [{ provide: 'googleTagManagerId', useValue: 'GTM-TFVH4HL' }],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
